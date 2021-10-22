@@ -44,7 +44,7 @@
             </div>
         </div>
         <form class="box" action="#" method="POST">
-            <h1>Buyer Login</h1>
+            <h1>Admin Login</h1>
             <input type="text" name="usern" placeholder="Username" />
             <input type="password" name="pass" placeholder="Password" />
             <input type="submit" name="sub" value="Login" />
@@ -54,7 +54,7 @@
 </html>
 
 <?php
-    include("dbcon.php");
+include("dbcon.php");
 ?>
 
 <?php
@@ -64,7 +64,7 @@
             $password= ( $_POST['pass']) ;
 
 
-            $find= "select * from registration where username='$username'";
+            $find= "select * from admin where admin_name='$username'";
 
         //     $ique= mysqli_query($con,$find);
 
@@ -72,9 +72,9 @@
             $result = $con->query($find);
             if($result->num_rows > 0) {
                 $row = $result->fetch_assoc();
-                if($password == $row['pass']){
-                    $_SESSION['login'] = $row["sno"];
-                    header("Location: home.php");
+                if($password == $row['admin_pass']){
+                    $_SESSION['login_admin'] = $row["admin_id"];
+                    header("Location: admin_home.php");
                 }
                 else {
                     echo "<script> alert('Incorrect Password');</script>";

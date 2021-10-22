@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -5,21 +9,23 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>About Us</title>
-        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="css/styles.css" />
     </head>
     <body style="background-image: none">
         <div class="container-about">
             <h1 class="head">ONLINE FARMING SYSTEM</h1>
             <div class="menu">
                 <ul>
-                    <li><a href="Index.html"> Home </a></li>
-                    <li><a href="Vlog.html">Vlog</a></li>
-                    <li>
+                    <li><a href="admin_home.php"> Home </a></li>
+                    <li><a href="insert_admin.php">Add Another Admin</a></li>
+                    <li><a href="Vlog_admin.php">Vlog</a></li>
+                
+                    <!-- <li>
                         <a href="#">Login</a>
                         <ul>
                             <li><a href="Login.php">Farmer</a></li>
                             <li><a href="Login.php">Buyer</a></li>
-                            <li><a href="Login.php">Admin</a></li>
+                            <li><a href="LoginAdmin.php">Admin</a></li>
                         </ul>
                     </li>
                     <li>
@@ -29,10 +35,13 @@
                             <li><a href="Registration.php">Buyer</a></li>
                             <li><a href="Registration.php">Admin</a></li>
                         </ul>
-                    </li>
-                    <li><a href="store.html">Digital market</a></li>
-                    <li><a href="#">Hire</a></li>
-                    <li><a href="About.html">About Us</a></li>
+                    </li> -->
+                    <li><a href="table_admin.php">Admins</a></li>
+                    <li><a href="table_products.php">Products</a></li>
+                    <li><a href="table_registration.php">Registrations</a></li>
+                    <li><a href="table_transaction.php">Transactions</a></li>
+                    <li><a href="About_admin.php">About Us</a></li>
+                    <li><a href="logout.php">Logout</a></li>
                 </ul>
             </div>
         </div>
@@ -51,7 +60,7 @@
                                 target="_blank"
                             >
                                 <img
-                                    src="facebook.png"
+                                    src="images/facebook.png"
                                     alt="facebook"
                                     height="40px"
                                 />
@@ -62,7 +71,7 @@
                                 target="_blank"
                             >
                                 <img
-                                    src="instagram.png"
+                                    src="images/instagram.png"
                                     alt="instagram"
                                     height="40px"
                                 />
@@ -73,7 +82,7 @@
                                 target="_blank"
                             >
                                 <img
-                                    src="twitter.png"
+                                    src="images/twitter.png"
                                     alt="twitter"
                                     height="40px"
                                 />

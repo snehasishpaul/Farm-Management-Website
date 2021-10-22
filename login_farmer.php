@@ -44,7 +44,7 @@
             </div>
         </div>
         <form class="box" action="#" method="POST">
-            <h1>Buyer Login</h1>
+            <h1>Farmer Login</h1>
             <input type="text" name="usern" placeholder="Username" />
             <input type="password" name="pass" placeholder="Password" />
             <input type="submit" name="sub" value="Login" />
@@ -54,7 +54,7 @@
 </html>
 
 <?php
-    include("dbcon.php");
+include("dbcon.php");
 ?>
 
 <?php
@@ -64,7 +64,7 @@
             $password= ( $_POST['pass']) ;
 
 
-            $find= "select * from registration where username='$username'";
+            $find= "select * from farmer where f_username='$username'";
 
         //     $ique= mysqli_query($con,$find);
 
@@ -72,9 +72,9 @@
             $result = $con->query($find);
             if($result->num_rows > 0) {
                 $row = $result->fetch_assoc();
-                if($password == $row['pass']){
-                    $_SESSION['login'] = $row["sno"];
-                    header("Location: home.php");
+                if($password == $row['f_pass']){
+                    $_SESSION['login_farmer'] = $row["f_id"];
+                    header("Location: home_farmer.php");
                 }
                 else {
                     echo "<script> alert('Incorrect Password');</script>";

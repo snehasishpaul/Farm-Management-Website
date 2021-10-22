@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/materialize.css" />
-  <title>market</title>
+  <title>admin table</title>
   <style>
       .nav-wrapper {
         background-color: #20702d;
@@ -46,11 +46,6 @@
           background-color: #20702d;
           border-radius: 5px;
           text-decoration: none;
-          color: white;
-      }
-
-      .btn-buy > a {
-          color: white;
       }
 
       .a-buy {
@@ -69,7 +64,7 @@
     
         <nav>
                 <div class="nav-wrapper">
-                    <a href="home.php" class="brand-logo center">Product Market</a>
+                    <a href="home.php" class="brand-logo center">Admin Data</a>
                 </div>
                 
                 <script>
@@ -84,15 +79,15 @@
     <div class="container-product">
         <aside class="aside-left">
             <?php
-                $query="select * from products";
+                $query="select * from admin";
                 $result=$con->query($query);
                 if(!$result) echo "Querying failed";
                 
                 if ($result->num_rows > 0) {
-                    echo "<table><tr><th>Product ID</th><th>Name</th><th>Type</th><th>Price</th><th>Confirm</th></tr>";
+                    echo "<table><tr><th>Admin ID</th><th>Admin Name</th><th>Admin Pass</th></tr>";
                     while($row = $result->fetch_assoc()) {
-                        $a = $row["p_id"];
-                        echo "<tr><td>".$row["p_id"]."</td><td>".$row["p_name"]."</td><td>".$row["p_category"]."</td><td>".$row["p_price"]."</td><td><button class='btn-buy'><a  href='transaction.php?a=$a'>Buy Now</a></button></td></tr>";
+                        $a = $row["admin_id"];
+                        echo "<tr><td>".$row["admin_id"]."</td><td>".$row["admin_name"]."</td><td>".$row["admin_pass"]."</td></tr>";
                     }
                     echo "</table>";
                 }else{
@@ -100,6 +95,9 @@
                 }
             ?>
         </aside>
+    </div>
+    <div class="btn-table" style="margin: auto; height: 10px; width: 30px;">
+        <button style="background-color: #20702d;"><a href="admin_home.php" style="color: white;">Back</a></button>
     </div>
    
 

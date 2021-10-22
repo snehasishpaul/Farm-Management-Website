@@ -180,18 +180,16 @@
         </div>
         <div class='container-vlog' style="margin: auto;">
             <div class="header-vlog">
-                <h1 class="hd">Buyer Register Here :</h1>
+                <h1 class="hd">Farmer Register Here :</h1>
             </div>
             <div class="jpg" style="margin: auto;">
-            	<img src="images/re.jpg" alt="Registration image" class="jm">
+            	<img src="images/registration.jpg" class="jm" alt="Registration image">
             </div>
             <div class="main">
-            	<form action="Registration.php" method="POST">
+            	<form action="registration_farmer.php" method="POST">
             		<b>NAME:</b> <input type="text" name="user" placeholder="User name" class="fir" required=""><br>
-            		<b>EMAIL:</b> <input type="email" name="email" placeholder="email here" required="" class="sec"><br>
             		<b>ADDRESS: </b><textarea placeholder="Address here" class="thi" required="" name="addre"></textarea><br>
-            		<b>PASSWORD:</b> <input type="PASSWORD" name="pass" placeholder="Password here" required="" class="fou"><br>
-            		<b>CONFIRM PASSWORD:</b> <input type="PASSWORD" name="cpass" placeholder="Confirm password" required="" class="fiv"><br>
+            		<b>PASSWORD:</b> <input type="PASSWORD" name="pass" placeholder="Password here" required="" class="fou"><br>            		
             		<b>MOBILE NUMBER:</b><input type="tel" name="mobile" placeholder="Mobile number" required="" class="six"><br>
             		<input type="submit" name="regi" value="Register" class="reg"><br>
                     <input type="reset" name="reset" value="Reset" class="reg">
@@ -207,22 +205,20 @@
                         }   
 
                         $username= ( $_POST['user']) ;
-                        $email= ( $_POST['email']) ;
                         $password= ( $_POST['pass']) ;
-                        $cpassword= ( $_POST['cpass']) ;
                         $mobile= ( $_POST['mobile']) ;
                         $adress= ( $_POST['addre']) ;
 
-                                $insert="insert into registration values('','$username','$email','$password','$cpassword','$mobile','$adress')" ;
+                                $insert="insert into farmer values('','$username','$adress','$password','$mobile')" ;
 
                                 $ique= mysqli_query($con,$insert);
 
                                 if($ique)
                             {
-                                echo "insert sucess" ;
+                                echo "<script> alert('Successfully Registered');</script>";
                             }
                             else{
-                            echo " no record inserted";
+                            echo "<script> alert('Registration Failed');</script>";
                         }
 
                     }

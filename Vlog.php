@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -5,21 +9,21 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Vlogs</title>
-        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="css/styles.css" />
     </head>
     <body style="background-image: none;">
         <div>
             <h1 class="head">ONLINE FARMING SYSTEM</h1>
             <div class="menu">
                 <ul>
-                    <li><a href="Index.html"> Home </a></li>
-                    <li><a href="Vlog.html">Vlog</a></li>
-                    <li>
+                    <li><a href="home.php"> Home </a></li>
+                    <li><a href="Vlog.php">Vlog</a></li>
+                    <!-- <li>
                         <a href="#">Login</a>
                         <ul>
                             <li><a href="Login.php">Farmer</a></li>
                             <li><a href="Login.php">Buyer</a></li>
-                            <li><a href="Login.php">Admin</a></li>
+                            <li><a href="LoginAdmin.php">Admin</a></li>
                         </ul>
                     </li>
                     <li>
@@ -29,10 +33,11 @@
                             <li><a href="Registration.php">Buyer</a></li>
                             <li><a href="Registration.php">Admin</a></li>
                         </ul>
-                    </li>
-                    <li><a href="store.html">Digital market</a></li>
-                    <li><a href="#">Hire</a></li>
-                    <li><a href="About.html">About Us</a></li>
+                    </li> -->
+                    <li><a href="market.php">Digital market</a></li>
+                    
+                    <li><a href="About.php">About Us</a></li>
+                    <li><a href="logout.php">Logout</a></li>
                 </ul>
             </div>
         </div>
@@ -41,7 +46,7 @@
                 <h1>Welcome to Vlogs :</h1>
             </div>
             <div class="image">
-                <img src="b.jpg" alt="picture">
+                <img src="images/b.jpg" alt="picture">
             </div>
             <div class="vlog">
                 <p>

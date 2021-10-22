@@ -15,24 +15,25 @@
             body {
                 background-image: url(images/background.jpg);
             }
+            
         </style>
     </head>
     <body>
         <nav>
             <div class="nav-wrapper">
-                <a href="home.html" class="brand-logo center">Farming System</a>
+                <a href="" class="brand-logo center">Farming System</a>
             </div>
         </nav>
 
         <div class="container">
             <div class="row">
                 <div class="col s12 l6 center">
-                    <a class="btn-primary" href="Login.php">Login</a>
+                    <a class="btn-primary" href="Registration.php">Buyer Registration</a>
                 </div>
+               
                 <div class="col s12 l6 center">
-                    <a class="btn-primary" href="Registration.php"
-                        >Registration</a
-                    >
+                    <a class="btn-primary" href="registration_farmer.php"
+                        >Farmer Registration</a>
                 </div>
             </div>
         </div>

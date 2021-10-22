@@ -53,6 +53,7 @@
           color: white;
       }
 
+
       .a-buy {
           text-decoration: none;
           color: white;
@@ -69,13 +70,13 @@
     
         <nav>
                 <div class="nav-wrapper">
-                    <a href="home.php" class="brand-logo center">Product Market</a>
+                    <a href="home_farmer.php" class="brand-logo center">Product Market</a>
                 </div>
                 
                 <script>
                     function testfunction(id) {
-                        window.location.href="transaction.php?a=id";
-                        window.location.replace("transaction.php?a=id");
+                        window.location.href="transaction_farmer.php?a=id";
+                        window.location.replace("transaction_farmer.php?a=id");
                     }
                     
                 </script>
@@ -92,7 +93,7 @@
                     echo "<table><tr><th>Product ID</th><th>Name</th><th>Type</th><th>Price</th><th>Confirm</th></tr>";
                     while($row = $result->fetch_assoc()) {
                         $a = $row["p_id"];
-                        echo "<tr><td>".$row["p_id"]."</td><td>".$row["p_name"]."</td><td>".$row["p_category"]."</td><td>".$row["p_price"]."</td><td><button class='btn-buy'><a  href='transaction.php?a=$a'>Buy Now</a></button></td></tr>";
+                        echo "<tr><td>".$row["p_id"]."</td><td>".$row["p_name"]."</td><td>".$row["p_category"]."</td><td>".$row["p_price"]."</td><td><button class='btn-buy'><a  href='transaction_farmer.php?a=$a'>Buy Now</a></button></td></tr>";
                     }
                     echo "</table>";
                 }else{

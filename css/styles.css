@@ -8,7 +8,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-image: url(c.jpg);
+    background-image: url(../images/background.jpg);
     font-family: sans-serif;
     background-size: cover;
     background-position: cover;
